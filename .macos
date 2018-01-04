@@ -67,8 +67,22 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 # Disable smooth scrolling
 defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
-# Set highlight color to green
+# Set highlight color to default
 defaults write NSGlobalDomain AppleHighlightColor -string ""
+
+# Change desktop wallpaper to El Capitan
+
+if [ -n "$2" ]; then
+desktop=$2
+else
+desktop=0; # index of Desktop planned to change
+fi
+if [ -n "$1" ]; then
+desktopLocation="$1"
+else
+desktopLocation="/Library/Desktop Pictures/El Capitan.jpg" # location of the desktop image
+fi
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value='$desktopLocation' where value like '%.%' LIMIT $desktop,1;"
 
 # --- Finder --- #
 
