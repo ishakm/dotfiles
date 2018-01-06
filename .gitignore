@@ -1,5 +1,4 @@
 # General
-.DS_Store
 Desktop.ini
 .AppleDouble
 .LSOverride
@@ -7,17 +6,10 @@ Desktop.ini
 # Icon must end with two \r
 Icon
 
-
-# Thumbnails
-._*
-Thumbs.db
-
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
-.Spotlight-V100
 .TemporaryItems
-.Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 

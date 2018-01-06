@@ -443,8 +443,11 @@ defaults write com.apple.commerce AutoUpdate -bool true
 # Allow the App Store to reboot machine on macOS updates
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
-killall "SystemUIServer" &> /dev/null
-killall "Terminal" &> /dev/null
-killall "Dock" &> /dev/null
-killall "Finder" &> /dev/null
-killall "cfprefsd" &> /dev/null
+# --- Reset Processes --- #
+
+# Enable settings by killing processes
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+    "Dock" "Finder" "Mail" "Messages" "Photos" "Safari" "SystemUIServer" \
+    "Terminal" "Tweetbot" "iCal"; do
+    killall "${app}" &> /dev/null
+done
