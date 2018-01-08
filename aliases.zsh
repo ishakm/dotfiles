@@ -1,9 +1,20 @@
-# Shortcuts
-alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias reloadcli="source $HOME/.zshrc"
-alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias weather="curl -4 http://wttr.in"
+#!/usr/bin/env bash
 
-# Directories
-alias dotfiles="cd $DOTFILES"
-alias library="cd $HOME/Library"
+# navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+alias dt="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+
+# get week number
+alias week="date +%V"
+
+# print path entries on newline
+alias path='echo -e ${PATH//:/\\n}'
+
+# logout from current session
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
