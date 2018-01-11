@@ -18,3 +18,6 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # logout from current session
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# keep homebrew clean and updated
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
