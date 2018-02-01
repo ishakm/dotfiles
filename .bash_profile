@@ -14,3 +14,6 @@ fi
 
 # enable auto-activation of virtualenvs
 eval "$(pyenv virtualenv-init -)"
+
+# prevent homebrew from provoking pyenv config error
+alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
