@@ -27,3 +27,6 @@ alias reload="exec ${SHELL} -l"
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+
+# {TEMPORARY} virtualbox startup
+alias virtual="sudo /Applications/VirtualBox.app/Contents/MacOS/VirtualBox"
