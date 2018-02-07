@@ -226,6 +226,9 @@ defaults write com.apple.dock expose-group-by-app -bool false
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
+# Disable auto-switching
+defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+
 # --- Terminal --- #
 
 # Enable Secure Keyboard Entry in Terminal.app
