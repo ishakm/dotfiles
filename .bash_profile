@@ -17,3 +17,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # prevent homebrew from provoking pyenv config error
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
+
+# rbenv and ruby-build to manage and install Ruby versions 
+eval "$(rbenv init -)"
