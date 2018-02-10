@@ -20,6 +20,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # --- Updates --- #
 sudo softwareupdate -i -a
 
+# Set firmware password
+sudo firmwarepasswd -setpasswd -setmode command
+
 # --- General --- #
 
 # Set computer name (as done via System Preferences → Sharing)
